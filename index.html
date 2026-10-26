@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Clover Bend Café — A little home cooking in Bean Station</title>
+  <meta name="description" content="Explore a fictional Tennessee café: a readable menu, daily specials, a takeout ticket and catering. A restaurant website demo by Clinch Valley Digital.">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#f6f0e5">
+  <link rel="icon" href="assets/clover.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/imbue.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/albert.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="polish.css">
+  <script src="menu-data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the good stuff</a>
+<div class="demo-banner">DEMO — Example site by <a href="https://clinchvalleydigital.com" target="_blank" rel="noopener">Clinch Valley Digital</a><span>Fictional café. Real possibilities.</span></div>
+<header class="site-header">
+  <a class="wordmark" href="#home" aria-label="Clover Bend Café, home">Clover Bend<span>Café &amp; good company</span></a>
+  <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" type="button">Menu +</button>
+  <nav id="site-nav" aria-label="Main navigation"><a href="#specials">Specials</a><a href="#menu">The menu</a><a href="#gather">Gather here</a><a href="#visit">Visit us</a></nav>
+  <button class="button order-trigger" type="button">Order takeout <span aria-hidden="true">↗</span></button>
+</header>
+<main id="main">
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <img class="hero-image" src="assets/pancakes.webp" alt="Golden pancakes with melting butter, syrup and blueberries" width="1600" height="2409" fetchpriority="high">
+    <div class="hero-paper">
+      <h1 id="hero-title"><span>Good food.</span><span>Good company.</span></h1>
+      <p>Home cooking, coffee refills, and a seat at the table. Bean Station, Tennessee.</p>
+      <div class="hero-actions"><a class="button" href="#menu">See the menu <span aria-hidden="true">↓</span></a><button class="button light order-trigger" type="button">Order takeout ↗</button></div>
+      <div class="open-line"><span class="status-dot" aria-hidden="true"></span><span id="open-status">See our hours below</span></div>
+      <a class="quiet-link" href="#visit">Breakfast all day. Supper late Friday &amp; Saturday.</a>
+    </div>
+    <p class="hero-caption">Illustrative food photography · Tuqa Nabi / Unsplash</p>
+    <a class="scroll-cue" href="#specials" aria-label="Scroll to today's specials"><span aria-hidden="true">↓</span> Something good’s cooking</a>
+  </section>
+
+  <section class="specials section" id="specials" aria-labelledby="special-title">
+    <div class="special-intro"><h2 id="special-title">Today’s<br>good stuff.</h2><p>The small-batch side of the menu. Pull up a chair—or take a little home.</p><p class="small" id="special-date">A sample specials board</p><a class="text-link" href="#menu">Find your usual, too ↗</a></div>
+    <div class="chalkboard" aria-label="Illustrative specials board">
+      <div class="board-top"><span>Clover Bend kitchen</span><span id="board-day">Fresh from the board</span></div>
+      <div class="chalk-item"><div><h3>Tomato soup &amp; toast</h3><p>A bowl of the good stuff. Thick-cut buttered toast.</p></div><strong>$8</strong><button type="button" data-add="soup" aria-label="Add tomato soup to your demo ticket">Add ↗</button></div>
+      <div class="chalk-item"><div><h3>Sunday-style roast chicken</h3><p>Roast chicken, mashed potatoes, green beans.</p></div><strong>$16.50</strong><button type="button" data-add="roast" aria-label="Add roast chicken to your demo ticket">Add ↗</button></div>
+      <div class="chalk-item all-gone"><div><h3><span>Apple pie by the slice</span></h3><p>We’ll save you a slice next time.</p></div><strong>$6.50</strong><span class="sold-mark">All gone</span></div>
+      <div class="board-bottom"><p>Sample availability · pie is sold out in this demo</p><button class="chalk-replay" type="button">Replay chalk mark ↺</button></div>
+    </div>
+  </section>
+
+  <section class="menu-section section" id="menu" aria-labelledby="menu-title">
+    <div class="section-heading"><h2 id="menu-title">Find your favorite.</h2><div><p>No squinting at a PDF. Just good things, clearly priced.</p><button class="text-link" id="dietary-help" type="button">Dietary &amp; allergy notes ↗</button></div></div>
+    <div class="menu-tabs" role="tablist" aria-label="Menu categories"></div>
+    <div class="menu-composition">
+      <div class="menu-photo-wrap"><figure class="menu-photo"><img id="menu-image" src="assets/pancakes.webp" alt="A stack of pancakes with butter and blueberries" width="700" height="900" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><figcaption id="menu-photo-caption">The breakfast table · illustrative photograph</figcaption></figure><p class="menu-photo-note" id="menu-photo-note">A slow morning starts here.</p></div>
+      <div class="menu-paper" id="menu-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-breakfast"><div class="menu-paper-title"><h3 id="category-title">Breakfast</h3><span>Made for a good day.</span></div><div id="menu-items"></div><p class="small menu-note">All menu items and prices are fictional examples. Dietary labels describe sample recipes; a real kitchen must confirm ingredients and cross-contact.</p></div>
+    </div>
+    <div class="menu-bottom"><p><span class="diet v">V</span> Vegetarian <span class="diet gf">GF</span> No gluten ingredients <span class="diet hot">H</span> A little heat</p><button class="button order-trigger" type="button">Open your takeout ticket <span class="cart-count" aria-hidden="true">0</span></button></div>
+  </section>
+
+  <section class="take-home section" aria-labelledby="take-home-title">
+    <div class="take-home-copy"><h2 id="take-home-title">Your table.<br>Our cooking.</h2><p>Lunch on your porch. Supper after practice. Put together a takeout ticket and choose a pickup time that fits.</p><ol class="order-steps"><li>Pick something good.</li><li>Choose your pickup.</li><li>See your demo confirmation.</li></ol><button class="button cream order-trigger" type="button">Let’s build your order ↗</button><p class="small">A working preview. Nothing ordered, saved, sent or charged.</p></div>
+    <div class="ticket-scene" data-ui><div class="ticket-clip" aria-hidden="true"></div><div class="paper-ticket" id="home-ticket"><p>Clover Bend Café</p><h3>A little to go.</h3><div class="sample-ticket-lines"><span>Buttermilk pancakes <b>$10.50</b></span><span>Bottomless coffee <b>$3.00</b></span></div><p class="ticket-total">A good morning <strong>$13.50</strong></p><span class="ticket-stamp">Made with care</span><p class="small">Sample ticket · before illustrative tax</p></div></div>
+  </section>
+
+  <section class="gather section" id="gather" aria-labelledby="gather-title">
+    <figure><img src="assets/pie.webp" alt="An apple pie and green apples on a rustic table" width="1100" height="750" loading="lazy"><figcaption>Illustrative photograph · Annie Spratt / Unsplash</figcaption></figure>
+    <div><h2 id="gather-title">Bring your<br>whole bunch.</h2><p>Family reunions. Church lunches. A birthday that needs a proper pie. Let’s put something warm in the middle of your table.</p><p>Our sample catering menu has breakfast spreads, comfort-food suppers, and dessert tables. Private gatherings are part of the picture, too.</p><button class="button" type="button" data-open="catering">Plan a gathering ↗</button><p class="small">Preview a catering inquiry for 8–150 guests. No request is sent.</p></div>
+  </section>
+
+  <section class="story section" id="story" aria-labelledby="story-title">
+    <div class="story-letter"><h2 id="story-title">A place to<br>come back to.</h2><p>In our little fictional corner of Bean Station, June starts the coffee before the sun gets over the ridge. Cal claims the corner booth. Somebody’s always asking what’s in the oven.</p><p>That’s the café we imagined: familiar recipes, plates worth passing, and time for one more cup. Nothing fancy. Plenty to love.</p><p class="signed">June &amp; Cal<br><span>The fictional folks behind Clover Bend</span></p></div>
+    <figure class="story-photo"><img src="assets/diner.webp" alt="A nostalgic diner with red booths, tables and checkered flooring" width="1600" height="1066" loading="lazy"><figcaption>A little diner inspiration · Nellie Adamyan / Unsplash.<br>This is not an actual Clover Bend location.</figcaption></figure>
+  </section>
+
+  <section class="gifts section" id="gifts" aria-labelledby="gifts-title">
+    <div class="gift-art" aria-hidden="true"><div class="gift-envelope"></div><div class="gift-card"><span>Clover Bend Café</span><strong>Good things<br>come around.</strong><span>A little treat, on you.</span><b id="gift-display">$50</b></div></div>
+    <div class="gift-copy"><h2 id="gifts-title">Give them<br>a good day.</h2><p>A birthday breakfast. A thank-you lunch. A little something for the neighbor who always shows up.</p><div class="gift-amounts" role="group" aria-label="Sample gift card amount"><button type="button" data-gift="25" aria-pressed="false">$25</button><button type="button" data-gift="50" aria-pressed="true">$50</button><button type="button" data-gift="75" aria-pressed="false">$75</button><button type="button" data-gift="100" aria-pressed="false">$100</button></div><button class="button" type="button" data-open="gift">Make someone’s day ↗</button><p class="small">Demo gift card only. No purchase, payment or delivery.</p></div>
+  </section>
+
+  <section class="reviews section" aria-labelledby="review-title"><div class="section-heading"><h2 id="review-title">Worth sharing.</h2><p><strong>Sample reviews for a fictional café.</strong><br>These are written examples, not real customer feedback.</p></div><div class="review-layout"><blockquote id="review-quote">“The kind of breakfast that turns a quick stop into a slow morning.”<footer>Sample diner A · fictional review</footer></blockquote><div class="review-controls"><button type="button" id="review-prev" aria-label="Previous sample review">←</button><span id="review-count">1 of 3</span><button type="button" id="review-next" aria-label="Next sample review">→</button></div></div></section>
+
+  <section class="regulars section" id="regulars" aria-labelledby="regular-title"><figure><img src="assets/coffee.webp" alt="Warm cups of coffee on a café table" width="900" height="1200" loading="lazy"><figcaption>Illustrative photograph · Nathan Dumlao / Unsplash</figcaption></figure><div><h2 id="regular-title">Be in on<br>the good stuff.</h2><p>A new special. Pie fresh from the oven. A reason to stop by. Choose the news you’d want from your neighborhood café.</p><form id="regulars-form"><label for="regular-email">Your email <span class="small">Use a fictional address for this demo</span></label><div class="signup-line"><input id="regular-email" type="email" maxlength="150" placeholder="you@example.com" required autocomplete="off"><button class="button" type="submit">Count me in ↗</button></div><fieldset><legend class="sr-only">Sample newsletter preferences</legend><label class="check"><input type="checkbox" name="news" value="specials" checked> Daily specials</label><label class="check"><input type="checkbox" name="news" value="events"> Gatherings &amp; news</label></fieldset><p class="small">Preview only. This form never subscribes you or saves your email.</p></form><div id="regular-result" class="inline-result" role="status" hidden></div></div></section>
+
+  <section class="visit section" id="visit" aria-labelledby="visit-title"><div class="section-heading"><h2 id="visit-title">Come on over.</h2><p>A fictional little café in a real East Tennessee town.<br>Everything you’d need before you leave the house.</p></div><div class="visit-layout"><div class="visit-card"><h3>Clover Bend Café</h3><p>18 Supper Lane<br>Bean Station, Tennessee 37708</p><p class="small">Invented address · not an operating restaurant</p><dl class="hours"><div><dt>Monday</dt><dd>Closed</dd></div><div><dt>Tuesday–Thursday</dt><dd>7 am–2 pm</dd></div><div><dt>Friday–Saturday</dt><dd>7 am–8 pm</dd></div><div><dt>Sunday</dt><dd>8 am–2 pm</dd></div></dl><p><strong>Breakfast all day.</strong> Late supper Friday &amp; Saturday. All times Eastern.</p><p>Sample arrival details: parking beside the café, a step-free side entrance, and a pickup shelf just inside the door.</p><button class="text-link" type="button" data-open="visit">Preview arrival details ↗</button></div><div class="map-panel"><svg viewBox="0 0 600 470" role="img" aria-label="Illustrative neighborhood map, not navigation directions"><rect width="600" height="470" fill="#e5e5d7"/><path d="M0 330 Q140 270 180 355T410 380T600 320V470H0Z" fill="#b5c8c1"/><path d="M-30 140L660 225M160-20L335 500" stroke="#fffaf0" stroke-width="37" fill="none"/><path d="M-30 140L660 225M160-20L335 500" stroke="#b7afa0" stroke-width="3" fill="none"/><path d="M0 270L600 70M390 0L455 470" stroke="#f8f1e6" stroke-width="18" fill="none"/><text x="60" y="118" fill="#504637" font-size="18" transform="rotate(7 60 118)">Main Street</text><text x="366" y="58" fill="#504637" font-size="18" transform="rotate(82 366 58)">Supper Lane</text><text x="48" y="424" fill="#354a42" font-size="20">Cherokee Lake country</text><circle cx="295" cy="183" r="33" fill="#a92e22"/><circle cx="295" cy="183" r="10" fill="#fff8eb"/><path d="M275 204L295 234L315 204" fill="#a92e22"/></svg><div class="map-label"><strong>Clover Bend Café</strong><span>Illustrative map · not for navigation</span></div></div></div></section>
+
+  <section class="faq section" aria-labelledby="faq-title"><h2 id="faq-title">Before you ask.</h2><div><details><summary>Can I order takeout?</summary><p>Try the takeout ticket on this demo. Pick dishes, choose a sample pickup time, and preview a confirmation. Nothing reaches a kitchen, and no payment is taken.</p></details><details><summary>What about food allergies?</summary><p>The sample menu lists ingredients and common allergens. GF means the illustrated recipe has no gluten ingredients; it does not mean an allergen-free kitchen. At a real café, speak with staff before ordering about ingredients, substitutions and cross-contact.</p></details><details><summary>Do you cater or host gatherings?</summary><p>The catering form previews breakfast spreads, comfort suppers and dessert tables for 8–150 guests. Family gatherings, reunions and church events are examples. No dates or catering services are actually available to book here.</p></details><details><summary>Are kids welcome?</summary><p>In our café concept, absolutely. Smaller portions and high chairs would be part of the welcome. This fictional demo does not represent an operating restaurant.</p></details><details><summary>Is the café open for dinner every day?</summary><p>No. In this concept, Tuesday–Thursday close at 2 pm, Friday–Saturday stay open until 8 pm, Sunday closes at 2 pm, and Monday is closed. Breakfast is served throughout every open day.</p></details><details><summary>Is any of this a real order or purchase?</summary><p>No. Clover Bend is a fictional example by Clinch Valley Digital. Orders, catering inquiries, gift cards, reviews and signups demonstrate possibilities. Forms do not store or send details, and there is no payment processing.</p></details></div></section>
+</main>
+<footer class="site-footer"><div><p>Want a site like this<br>for your restaurant?</p><a class="button cream" href="https://clinchvalleydigital.com" target="_blank" rel="noopener">Let’s make it yours ↗</a></div><a class="footer-wordmark" href="#home">Clover Bend</a><div class="footer-bottom"><span>A fictional café. An example of what’s possible.</span><a href="https://clinchvalleydigital.com" target="_blank" rel="noopener">Built by Clinch Valley Digital ↗</a><button class="quiet-link" id="credits-button" type="button">Photo &amp; font credits</button><button class="quiet-link" id="motion-toggle" type="button" aria-pressed="false">Pause motion</button></div></footer>
+<div class="mobile-dock"><a href="#menu">See the menu</a><button class="order-trigger" type="button">Order takeout <span class="cart-count">0</span></button></div>
+<div class="toast" role="status" id="toast" hidden></div>
+<dialog id="order-dialog" class="order-dialog" aria-labelledby="order-title"><button class="dialog-close" type="button" data-close aria-label="Close takeout preview">×</button><div id="order-content"></div></dialog>
+<dialog id="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close" type="button" data-close aria-label="Close preview">×</button><div id="detail-content"></div></dialog>
+<noscript><div class="noscript">This fictional café demo uses JavaScript for its interactive menu and preview forms. Hours, story and visit details remain readable above. No orders can be placed.</div></noscript>
+</body></html>
+

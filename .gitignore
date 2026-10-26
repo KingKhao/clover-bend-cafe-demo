@@ -1,0 +1,12 @@
+.vercel/
+.playwright-cli/
+.taste-skill/
+__pycache__/
+*.log
+qa-results.txt
+qa-final-results.txt
+finalize.py
+refine.py
+FULL-CODE.md
+.env
+.env.*

@@ -1,0 +1,11 @@
+.git/
+.github/
+.playwright-cli/
+.taste-skill/
+*.md
+*.py
+*.cjs
+qa-*.txt
+*.log
+.env*
+__pycache__/
