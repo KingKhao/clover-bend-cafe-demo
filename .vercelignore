@@ -9,3 +9,16 @@ qa-*.txt
 *.log
 .env*
 __pycache__/
+
+.git/
+.github/
+node_modules/
+.playwright-cli/
+.env*
+*.csv
+*.db
+*.log
+*.py
+PRESHIP.md
+ASSETS.md
+SECURITY.md
