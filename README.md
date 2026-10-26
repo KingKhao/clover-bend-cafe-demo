@@ -50,4 +50,10 @@ No dependencies, package manager or account needed. Edit menu data in its one fi
 
 Desktop, tablet and phone layouts were visually reviewed. Automated style measurements passed with documented allowances for the physical printed-paper direction. This is not a claim of complete accessibility certification or physical-device performance testing. Test on actual phones before turning the concept into a real restaurant's site.
 
-Saved locally; this build has not been pushed to GitHub or published to Vercel.
+Published October 26, 2026:
+
+- Public demo: https://clover-bend-cafe-demo.vercel.app/
+- Private source repository: https://github.com/KingKhao/clover-bend-cafe-demo
+- Vercel project: https://vercel.com/wkb-projects/clover-bend-cafe-demo
+
+The Vercel project is connected to the GitHub repository. Pushes to `main` deploy the site. `.vercelignore` excludes development scripts, reports and documentation from the public static output. The deployment was verified with HTTP 200, `noindex, nofollow`, a 404 for the development QA script, and all 24 functional browser checks against the production URL.
